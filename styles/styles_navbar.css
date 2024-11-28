@@ -1,11 +1,8 @@
-footer{
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-}
 .navbar{
-    background-color: cornflowerblue;
+    position: absolute;
     overflow: hidden;
+    background-color: steelblue;
+    
 }
 
 /* Style the links inside the navigation bar */
@@ -28,4 +25,10 @@ footer{
   .navbar a.active {
     background-color: #0c2d6f;
     color: white;
+  }
+
+.column{
+position: absolute;
+left: 5%;
+bottom: 10%;
   }
