@@ -25,16 +25,16 @@ footer{
 }
 img{
     position: absolute;
-    left: 1%;
-    bottom: 71%;
-    right: 1%;
+    left: 0.6%;
+    bottom: 60%;
+    right: 20%;
 }
 h2{
     position: absolute;
-    right: 10%;
+    right: 9%;
 }
 h4{
     position: absolute;
     bottom: 70%;
-    right: 1%;
+    left: 75%;
 }
