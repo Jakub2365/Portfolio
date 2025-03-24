@@ -1,9 +1,8 @@
 .navbar{
     position: absolute;
     overflow:visible;
-    background-color: rgb(50, 33, 128);
-    left: 38.5%
-    
+    background-color: hsl(30, 51%, 26%);
+    left: 5%
 }
 
 /* Style the links inside the navigation bar */
@@ -22,14 +21,8 @@
     color: black;
   }
   
-  /* Add a color to the active/current link */
-  .navbar a.active {
-    background-color: #0d3993;
-    color: white;
-  }
-
 .column{
 position: absolute;
 left: 20%;
 bottom: 50%;
-  }
+}
