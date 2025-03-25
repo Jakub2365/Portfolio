@@ -1,50 +1,49 @@
 body {
-
-    margin: 0; /* Remove default margin */
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh; /* Full viewport height */
+    background-color: #282c34; /* Dark background */
+    color: white; /* White text color */
+    font-family: 'Bank Gothic', Courier, monospace; /* Monospace font for typing effect */
+    margin: 0; /* Remove default margin */
+}
 
-    overflow: hidden; /* Prevent scrolling */
+.container {
+    overflow: hidden; /* Hides the text that is not yet visible */
+    border-right: 0.15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    animation: caret 0.75s step-end infinite; /* Blinking cursor */
+}
 
-    position: relative; /* Positioning context for content */
+.typing-animation {
+    display: inline-block; /* Allows for animation */
+    width: 0; /* Start with no width */
+    overflow: hidden; /* Hides the text that is not yet visible */
+    animation: typing 4s steps(30, end) forwards; /* Typing effect */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 100%; /* End with full width */
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes caret {
+    from, to {
+        border-color: transparent; /* Invisible cursor */
+    }
+    50% {
+        border-color: rgb(0, 81, 255); /* Visible cursor */
+    }
 
 }
 
-
-iframe {
-
-    position: absolute; /* Position the iframe absolutely */
-
-    top: 0; /* Align to the top */
-
-    left: 0; /* Align to the left */
-
-    width: 100%; /* Full width */
-
-    height: 100%; /* Full height */
-
-    pointer-events: none; /* Prevent interaction with the iframe */
-
-}
-
-
-.content {
-
-    position: absolute; /* Position content over the video */
-
-    top: 50%; /* Center vertically */
-
-    left: 50%; /* Center horizontally */
-
-    transform: translate(-50%, -50%); /* Adjust for centering */
-
-    color: white; /* Text color */
-
-    text-align: center; /* Center text */
-
-    z-index: 1; /* Ensure content is above the video */
-
-}
 footer{
     color: white;
     padding-bottom: 0%;
@@ -63,20 +62,6 @@ title{
     text-align: right ;
 }
 
-h2{
-    position: absolute;
-    right: 15%;
-    height: 30%;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-}
-h4{
-    position: absolute;
-    bottom: 90%;
-    left: 75%;
-    width: 45%;
-    text-shadow: 2px 2px 4px #000000;
-}
 @media (width <= 650px ) {
     h4{
         position: absolute;
