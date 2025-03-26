@@ -79,5 +79,12 @@ title{
     img{
         height: 10%
     }
-
 }
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevent mouse events on the canvas */
+}
+

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles_navbar.css">
     <link rel="stylesheet" href="styles/styles_body.css">
-    <link rel="script" href="script.js">
 
     <title>Dancevsky</title>
 </head>
@@ -13,18 +12,33 @@
     </div>
     <nav class="navbar">
 <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="projects.html">Databáze</a></li>
-  <li><a href="contacts.html">Kontakt</a></li>
-  <li><a href="animations.html">Animace</a></li>
+  <div class="navbar">
+  <div class="logo">Archiv reality</div>
+  <div class="navbar-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="projects.html">Databáze</a>
+    <a href="contacts.html">Kontakty</a>
+    <a href="animations.html">Animace</a>
+      </div>
+    </div>
+  </div>
+  <div class="hamburger" onclick="toggleNavbar()">☰</div>
+</div>
+
+<script>
+  function toggleNavbar() {
+    document.querySelector('.navbar').classList.toggle('open');
+  }
+</script>
 </ul> 
     </nav>
 
     <div class="container">
-
         <h1 class="typing-animation">Přístup povolen... Vítejte v systému.</h1>
-
     </div>
+
+    <canvas id="trailCanvas"></canvas>
+
     <footer>
         Copyright Jakub Dancevsky
         <p>
@@ -32,6 +46,7 @@
             </a>
         </p>
     </footer>
+    <script src="script.js"></script>
     
 </body>
 </html>
