@@ -11,24 +11,17 @@
 <body>
     <nav class="navbar">
         <ul>
-          <div class="navbar">
-          <div class="logo">Archiv reality</div>
-          <div class="navbar-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Databáze</a>
-            <a href="contacts.html">Kontakty</a>
-            <a href="animations.html">Animace</a>
-              </div>
-            </div>
-          </div>
-          <div class="hamburger" onclick="toggleNavbar()">☰</div>
-        </div>
-        
-        <script>
-          function toggleNavbar() {
-            document.querySelector('.navbar').classList.toggle('open');
-          }
-        </script>
+            <a class="active" href="/index.html">
+                Domovská stránka
+            </a>
+            <a href="/projects.html">
+                Projekty
+            </a>
+            <a href="/contacts.html">
+                Kontakty
+            </a>
+        </ul>
+    </nav>
     <footer>
         Copyright Jakub Dancevsky
         <p>
@@ -36,8 +29,5 @@
             </a>
         </p>
     </footer>
-
-    <canvas id="trailCanvas"></canvas>
-    <script src="script.js"></script>
 </body>
 </html>

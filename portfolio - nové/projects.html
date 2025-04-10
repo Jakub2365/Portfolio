@@ -4,62 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles_navbar.css">
-    <link rel="stylesheet" href="styles/styles_projects.css">
+    <link rel="stylesheet" href="styles/style_projects.css">
     <link rel="stylesheet" href="styles/styles_body.css">
     <title>Projects</title>
 </head>
-
 <body>
-  
-    
-  <div class="gallery">
-    <img src="https://image.api.playstation.com/cdn/EP0001/CUSA05847_00/pEBJnRh6DeL2BfyZRa9jZRrNuSav42QPJIXyqo6Rgcr52o9kYLwY4EpouAzWh4Fu.png?w=440" alt="Two hands creating a heart and showing the sun">
-    <img src="https://assets-prd.ignimgs.com/2022/01/28/starfield-ign-sq-1643334195275.jpg" alt="The mountain">
-    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/eEczyEMDd2BLa3dtkGJVE9Id.png" alt="a river">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXCeaowxaEGu6gM-v9gtJOMtb1tMFLXTjXg&s" alt="a women with a camera">
-  </div>
-
-  <div class="text-section">
-    <h2>Moje oblíbené hry</h2>
-    <p>Tyhle čtyři hry bych zařadil jako mezi mé nejlepší, jelikož všechny mají jak skvělý soundtrack, tak i hratelnost.</p>
-    <p>Žánrově jsou taky skvělé. Mezi mé oblíbené žánry jsou sci-fi, zombie a i celkem střílečky. Je toho samozřejmě více, ale toto prozatím stačí.</p>
-</div>
-
-    <canvas id="trailCanvas"></canvas>
-    <!-- Navigation Bar -->
-
     <nav class="navbar">
         <ul>
-          <div class="navbar">
-          <div class="logo">Archiv reality</div>
-          <div class="navbar-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Databáze</a>
-            <a href="contacts.html">Kontakty</a>
-            <a href="animations.html">Animace</a>
-              </div>
-            </div>
-          </div>
-          <div class="hamburger" onclick="toggleNavbar()">☰</div>
-        </div>
-        
-        <script>
-          function toggleNavbar() {
-            document.querySelector('.navbar').classList.toggle('open');
-          }
-        </script>
+            <a class="active" href="/index.html">
+                Domovská stránka
+            </a>
+            <a href="/projects.html">
+                Projekty
+            </a>
+            <a href="/contacts.html">
+                Kontakty
+            </a>
+        </ul>
     </nav>
 
-    <!-- Footer Section -->
-    <footer>
-      Copyright Jakub Dancevsky
-      <p>
-          <a href="mailto:s2024DancevskyJakub@skolabaltaci.cz">s2024DancevskyJakub@skolabaltaci.cz
-          </a>
-      </p>
-  </footer>
-
-    <script src="script.js"></script>
-    <script src="projects.js"></script>
+    <div class="main">
+        <hr>
+      
+        <div class="row">
+          <div class="column">
+          </div>
+              <h3>Moje práce</h3>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+            </div>
+          </div>
+        </div>
+        
+        <div class="content">
+          <h3>Random obrázky</h3>
+          <h1>Zde je sbírka pár mých obrázků</h1>
+        </div>  
+        <footer>
+            Copyright Jakub Dancevsky
+            <p>
+                <a href="mailto:s2024DancevskyJakub@skolabaltaci.cz">s2024DancevskyJakub@skolabaltaci.cz 
+                </a>
+            </p>
+        </footer> 
 </body>
 </html>
