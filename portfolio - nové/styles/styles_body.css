@@ -1,22 +1,59 @@
-body{
-    background-color: rgb(64, 61, 61);
-    min-height: 100%;
+body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #282c34; /* Dark background */
+    color: white; /* White text color */
+    font-family: 'Bank Gothic', Courier, monospace; /* Monospace font for typing effect */
+    margin: 0; /* Remove default margin */
 }
-.content{
-    flex: 1;
-    background-color: rgb(106, 110, 135);
+
+.container {
+    overflow: hidden; /* Hides the text that is not yet visible */
+    border-right: 0.15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    animation: caret 0.75s step-end infinite; /* Blinking cursor */
 }
+
+.typing-animation {
+    display: inline-block; /* Allows for animation */
+    width: 0; /* Start with no width */
+    overflow: hidden; /* Hides the text that is not yet visible */
+    animation: typing 4s steps(30, end) forwards; /* Typing effect */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 100%; /* End with full width */
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes caret {
+    from, to {
+        border-color: transparent; /* Invisible cursor */
+    }
+    50% {
+        border-color: rgb(0, 81, 255); /* Visible cursor */
+    }
+
+}
+
 footer{
     color: white;
-    padding-bottom: 0.1%;
+    padding-bottom: 0%;
     background-color: rgb(87, 103, 224);
     text-align: center;
     width: 100%;
-    position: relative;
-    min-height: 10vh;
-  }  
+    position: absolute;
+    min-height: 5vh;
+    top: 200%;
+  } 
 
 title{
     right: 100%;
@@ -24,28 +61,7 @@ title{
     bottom: 0;
     text-align: right ;
 }
-img{
-    position: absolute;
-    left: 1%;
-    bottom: 58%;
-    right: 1%;
-    height: 40% ;
-    border-radius: 8px;
-}
-h2{
-    position: absolute;
-    right: 15%;
-    height: 30%;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-}
-h4{
-    position: absolute;
-    bottom: 90%;
-    left: 75%;
-    width: 45%;
-    text-shadow: 2px 2px 4px #000000;
-}
+
 @media (width <= 650px ) {
     h4{
         position: absolute;
@@ -63,35 +79,12 @@ h4{
     img{
         height: 10%
     }
-
-}
-html {
-    scroll-behavior: smooth;
-
-}
-html, body {
-    height: 175%;
-}
-  
-text{
-    top: 120%
-}
-h1{
-    font-size: large;
-    color: cadetblue;
 }
 
-.horizontal-scroll {
-    height: 100vh;
-    background-color: #ccc;
-    overflow: hidden;
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevent mouse events on the canvas */
 }
 
-.horizontal-content {
-    display: flex;
-    gap: 20px;
-}
-
-.box{
-    width: 50%;
-}

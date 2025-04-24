@@ -5,32 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles_navbar.css">
     <link rel="stylesheet" href="styles/styles_body.css">
+
     <title>Dancevsky</title>
 </head>
 <body>
-    <div class="column_left">
-        <img src="https://store-images.s-microsoft.com/image/apps.36152.14036363693721723.401135bc-589f-4b90-91dd-bfbcb29f8b3e.4a4a546b-b04b-4235-be57-4f5c44cdbfa4?mode=scale&q=90&h=200&w=200&background=%23FFFFFF" alt="">
-    </div>
-    <div>
-        <h2>Vítejte na mé stránce!</h2>
-        <h4>Na nic nesahat a nic nebrat.</h4>
     </div>
     <nav class="navbar">
-        <ul>
-            <a class="active" href="/index.html">
-                Domovská stránka
-            </a>
-            <a href="/projects.html">
-                Projekty
-            </a>
-            <a href="/contacts.html">
-                Kontakty
-            </a>
-        </ul>
-    </nav>
-    <div class="content">
-
+<ul>
+  <div class="navbar">
+  <div class="logo">Archiv reality</div>
+  <div class="navbar-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="projects.html">Databáze</a>
+    <a href="contacts.html">Kontakty</a>
+    <a href="animations.html">Animace</a>
+      </div>
     </div>
+  </div>
+  <div class="hamburger" onclick="toggleNavbar()">☰</div>
+</div>
+
+<script>
+  function toggleNavbar() {
+    document.querySelector('.navbar').classList.toggle('open');
+  }
+</script>
+</ul> 
+    </nav>
+
+    <div class="container">
+        <h1 class="typing-animation">Přístup povolen... Vítejte v systému.</h1>
+    </div>
+
+    <canvas id="trailCanvas"></canvas>
+
     <footer>
         Copyright Jakub Dancevsky
         <p>
@@ -38,19 +46,9 @@
             </a>
         </p>
     </footer>
-
     <script src="script.js"></script>
-
-    <section class="horizontal-scroll">
-        <div class="horizontal-content">
-        <h1>TEST123</h1>
-    </div>
-    </section>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
-    <button class="box" onclick="alert('Něco jsi zmáčknul...')"></button>
 
+    
 </body>
 </html>

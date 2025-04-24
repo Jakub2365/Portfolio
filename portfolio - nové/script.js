@@ -1,45 +1,51 @@
-gsap.registerPlugin(ScrollTrigger);
-gsap.to(".box", { 
-    x: 200, 
-    duration: 1 
+const canvas = document.getElementById('trailCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let mouseX = 0;
+let mouseY = 0;
+const trailLength = 10; // Length of the trail
+const trail = [];
+
+// Function to update the mouse position
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 });
 
-function obsahTrojuhelniku(a, v){
-    // a = strana AB, v = vyska
-    let obsah = (1/2 * a * v)
-    console.log("Strana A:",a,"Vyska V:",v, "obsah:",obsah)
-}
-obsahTrojuhelniku(3.1, 3)
-
-function obvodCtverce(a){
-    let obvod = (4 * a)
-    console.log("Strana A:",a,"obvod:",obvod)
-}
-obvodCtverce(5)
-
-//let promenna1 = 1;
-//var promenna2= "ahoj";
-// () - vstup
-function vypisPozdrav(vstup1, vstup2, vstup3){
-    var prumer = (vstup1 + vstup2 + vstup3) / 3;
-    console.log(prumer);
-}
-vypisPozdrav(8,6,3)
-
-let pole = [8,6,3]
-// nebo = ||
-//&& a zároveň
-//== rovno
-//!= není rovno
-
-function vypisPozdrav(array){
-    if(array == null || array === null){
-        alert("test 123")
-    }else{
-        for(let i = 0; i < array.length; i++)
-        {
-            console.log(array[i])
-        }
+// Function to draw the trail
+function drawTrail() {
+    // Add the current mouse position to the trail
+    trail.push({ x: mouseX, y: mouseY });
+    // Limit the trail length
+    if (trail.length > trailLength) {
+        trail.shift(); // Remove the oldest position
     }
+
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the trail
+    ctx.beginPath();
+    ctx.moveTo(trail[0].x, trail[0].y);
+    for (let i = 1; i < trail.length; i++) {
+        ctx.lineTo(trail[i].x, trail[i].y);
+    }
+    ctx.strokeStyle = 'blue'; // Color of the trail
+    ctx.lineWidth = 5; // Width of the trail
+    ctx.stroke();
+
+
+    requestAnimationFrame(drawTrail); // Call the drawTrail function again
+
 }
-vypisPozdrav(pole)
+
+// Start drawing the trail
+drawTrail();
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
