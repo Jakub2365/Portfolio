@@ -9,8 +9,7 @@ body {
     margin: 0; /* Remove default margin */
 }
 
-.container {
-    overflow: hidden; /* Hides the text that is not yet visible */
+.container { /* Hides the text that is not yet visible */
     border-right: 0.15em solid orange; /* Cursor effect */
     white-space: nowrap; /* Prevents text from wrapping */
     animation: caret 0.75s step-end infinite; /* Blinking cursor */

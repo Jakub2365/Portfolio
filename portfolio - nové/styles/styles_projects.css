@@ -7,24 +7,16 @@ body{
 }
 
 .header {
-
     background-color: #333;
-
     color: white;
-
     text-align: center;
-
     padding: 50px 20px;
-
 }
 
 
 .section {
-
     padding: 60px 20px;
-
     min-height: 100vh; /* Each section takes at least the full viewport height */
-
 }
 
 
@@ -63,7 +55,6 @@ footer{
 
   .gallery {
     --g: 6px; /* the gap */
-    
     display: grid;
     width: 550px; /* the size */
     aspect-ratio: 1;
