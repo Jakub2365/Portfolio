@@ -1,15 +1,25 @@
-body{
-    background-color: rgb(101, 90, 90);
-    height: 200vh;
-}
-
-footer{
-    color: white;
-    padding-bottom: 0%;
-    background-color: rgb(87, 103, 224);
-    text-align: center;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center; /* horizontálně na střed */
+    align-items: flex-start; /* vertikálně nahoře */
+    min-height: 100vh;
+    background: #81A8B8;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 50px;    /* odsazení shora */
+    padding-right: 20px;  /* odsazení zprava */
+    box-sizing: border-box;
+  }
+  
+  #game-container {
+    max-width: 450px;
     width: 100%;
-    position: absolute;
-    min-height: 5vh;
-    top: 200%;
-  } 
+    text-align: center;
+  }

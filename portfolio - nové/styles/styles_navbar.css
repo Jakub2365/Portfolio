@@ -1,7 +1,7 @@
 .navbar {
   position: fixed; /* Keeps the navbar fixed in place */
   top: 0; /* Aligns the navbar to the top */
-  left: 0; /* Aligns the navbar to the left */
+  left: -40px; /* Aligns the navbar to the left */
   width: 100%; /* Full width */
   background-color: hsl(210, 50%, 20%); /* Dark blue background */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
@@ -21,17 +21,20 @@
   text-transform: uppercase;
   letter-spacing: 5px;
   cursor: pointer;
+  margin-left: 40px; /* <<<<<< posune logo víc doprava */
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
-  color: #ffffff; /* White link color */
-  text-align: center; /* Center text */
-  padding: 12px 55px; /* Adjusted padding for better spacing */
-  text-decoration: none; /* Removes underline */
-  font-size: 16px; /* Font size */
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition */
-  display: inline-block; /* Inline block for better positioning */
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 55px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  display: inline-block;
+  border-radius: 50px;
+  border: 2px solid black; /* <<<<<< černý rámeček */
 }
 
 /* Hover and active link styles */
