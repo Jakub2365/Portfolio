@@ -26,6 +26,16 @@ body {
   background-color: rgba(0,0,0,0.6);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+
+  /* ANIMACE SCROLL */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .gallery {
@@ -116,7 +126,7 @@ body {
 }
 
 .new-gallery img {
-  width: 220px;
+  width: 440px;
   border-radius: 8px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -126,4 +136,15 @@ body {
 .new-gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

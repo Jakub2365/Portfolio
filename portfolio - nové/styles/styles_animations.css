@@ -1,5 +1,6 @@
 body {
-  min-height: 100vh; /* stránka bude alespoň tak vysoká jako okno */
+  height: 100vh; /* stránka bude alespoň tak vysoká jako okno */
+  background-color: #282c34;;
 }
 
 h1 {
@@ -50,3 +51,14 @@ h1 {
     text-align: center;
     font-style: italic;
   }
+
+  .section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

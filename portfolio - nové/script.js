@@ -12,8 +12,9 @@ const trail = [];
 // Function to update the mouse position
 
 document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    const rect = canvas.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
 });
 
 // Function to draw the trail

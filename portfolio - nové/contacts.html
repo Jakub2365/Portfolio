@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="styles/styles_navbar.css">
     <link rel="stylesheet" href="styles/styles_contact_page.css">
     <title>Contacts</title>
+
+    <style>
+  #game-container {
+    position: relative;
+    width: 800%;
+    height: 100vh;
+  }
+
+  #snake {
+    position: absolute;
+    top: 50%;
+    left: 200%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+  }
+</style>
+
 </head>
 <body>
+  
     <nav class="navbar">
         <ul>
           <canvas id="trailCanvas"></canvas>
@@ -17,7 +35,7 @@
           <div class="navbar-links">
             <a href="index.html" class="active">Home</a>
             <a href="projects.html">Databáze</a>
-            <a href="contacts.html">Kontakty</a>
+            <a href="contacts.html">Hra</a>
             <a href="animations.html">Galerie</a>
               </div>
             </div>
@@ -34,34 +52,77 @@
 <title>Had - Mini hra</title>
   <style>
     body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #81A8B8;
-      font-family: Arial, sans-serif;
-    }
-    #game-container {
-      text-align: center;
-      max-width: 450px;
-    }
-    canvas {
-      background: #222;
-      border-radius: 10px;
-      display: block;
-      margin: 0 auto 10px auto;
-    }
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #81A8B8;
+  }
+
+  #game-container {
+    max-width: 450px;
+    text-align: center;
+  }
+
+#text-box {
+  width: 100vw;               /* celá šířka okna */
+  box-sizing: border-box;     /* padding a border se počítají do šířky */
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 10px 0 20px 0;      /* žádné levé/pravé marginy */
+  background: linear-gradient(135deg, #222, #444);
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  font-family: 'Bank Gothic', Courier, monospace;
+  font-size: 1.2rem;
+  min-height: 200px;
+  text-align: center;
+  position: relative;
+  left: 0;
+
+
+  /* Animace */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+#text-box:hover {
+  background: linear-gradient(135deg, #444, #222);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.85);
+  cursor: default;
+}
+
+/* Definice animace */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  canvas {
+    background: #222;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+  }
   </style>
 </head>
 <body>
+  
   <div id="game-container">
-    <h2>Mini hra: Had</h2>
-    <canvas id="snake" width="400" height="400"></canvas>
-    <p>Ovládání: šipky ↑ ↓ ← →</p>
-    <p>Skóre: <span id="score">0</span></p>
-  </div>
+    <div id="text-box">
+      <h2>Mini hra: Had</h2>
+      <p>Ovládání: šipky ↑ ↓ ← →</p>
+      <p>Skóre: <span id="score">0</span></p>
+    </div>
+    <canvas id="snake" width="500" height="400"></canvas>
 
+  
   <script>
     const canvas = document.getElementById('snake');
     const ctx = canvas.getContext('2d');
@@ -145,6 +206,7 @@
 
     let game = setInterval(draw, 100);
   </script>
+
 
     <script src="script.js"></script>
 </body>
