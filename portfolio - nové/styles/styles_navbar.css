@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed; /* Keeps the navbar fixed in place */
+  top: 0; /* Aligns the navbar to the top */
+  left: -40px; /* Aligns the navbar to the left */
+  width: 100%; /* Full width */
+  background-color: hsl(210, 50%, 20%); /* Dark blue background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  padding: 10px 20px; /* Adds padding around the navbar */
+  border-radius: 8px; /* Rounded corners */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Distribute items */
+  align-items: center; /* Center items vertically */
+}
+
+/* Navbar Logo */
+.navbar .logo {
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  cursor: pointer;
+  margin-left: 40px; /* <<<<<< posune logo víc doprava */
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 55px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  display: inline-block;
+  border-radius: 50px;
+  border: 2px solid black; /* <<<<<< černý rámeček */
+}
+
+/* Hover and active link styles */
+.navbar a:hover, .navbar a.active {
+  background-color: hsl(210, 50%, 30%); /* Darker blue on hover */
+  color: #ffffff; /* Keep text white on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative; /* Relative position for dropdown */
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  cursor: pointer; /* Pointer cursor for dropdown button */
+  padding: 12px 18px; /* Same padding as links */
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: #ffffff; /* White text */
+  font-size: 17px; /* Font size */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Change the color of dropdown button on hover */
+.dropdown .dropbtn:hover {
+  background-color: hsl(210, 50%, 30%); /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioning for dropdown */
+  background-color: hsl(210, 50%, 20%); /* Same background as navbar */
+  min-width: 160px; /* Minimum width for dropdown */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for dropdown */
+  z-index: 1; /* Ensure dropdown is above other content */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #ffffff; /* White text */
+  padding: 12px 16px; /* Padding for dropdown links */
+  text-decoration: none; /* No underline */
+  text-align: left; /* Align text to the left */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: hsl(210, 50%, 30%); /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar elements */
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  /* Hide links and dropdown in small screens, show hamburger icon */
+  .navbar a, .dropdown .dropbtn {
+    display: none;
+  }
+  
+  .navbar-links {
+    display: none; /* Initially hide navbar links */
+    width: 100%; /* Full width */
+    text-align: center; /* Center links */
+  }
+  
+  .navbar-links a {
+    padding: 15px; /* Add padding to the links */
+    width: 100%; /* Make links full width */
+    display: block; /* Block elements */
+    background-color: hsl(210, 50%, 20%); /* Same background color */
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

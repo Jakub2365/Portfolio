@@ -1,0 +1,64 @@
+body {
+  height: 100vh; /* stránka bude alespoň tak vysoká jako okno */
+  background-color: #282c34;;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .grid-container {
+    width: 90%;
+    margin: 0 auto;
+    columns: 5 200px;
+    column-gap: 1.5rem;
+    position: static !important;
+    overflow: visible !important;
+  }
+  
+  /* Každá "karta" v galerii */
+  .grid-container div {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem; /* mezera pod */
+    /* Odstraň margin-right */
+  }
+  
+  
+  /* Hover efekty */
+  .grid-container div:hover img {
+    filter: grayscale(0);
+  }
+  
+  .grid-container div:hover {
+    border-color: rgb(255, 255, 255);
+  }
+  
+  /* Obrázek */
+  .grid-container img {
+    width: 100%;
+    filter: grayscale(100%);
+    border-radius: 5px;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  /* Text pod obrázkem */
+  .grid-container p {
+    margin: 5px 0;
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,63 @@
+.typing-container {
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  animation: caret 0.75s step-end infinite;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.typing-animation {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  animation: typing 4s steps(30, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(0, 81, 255); }
+}
+
+.top-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.top-image-container img {
+  max-width: 10%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+.contact-box {
+  max-width: 8000px;
+  margin: 550px auto;
+  padding: 20px;
+  background-color: rgba(10, 10, 10, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  color: #eee;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
